@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sat Aug 17 13:30:28 CEST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-016c-9f57-cffe-000006748cc8 
+on database directory D:\JAVA\New Folder\nagyProject\sampleDB with class loader sun.misc.Launcher$AppClassLoader@55f96302 
+Loaded from file:/D:/JAVA/New%20Folder/nagyProject/dist/run1086170892/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_201-b09
+user.dir=D:\JAVA\New Folder\nagyProject
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

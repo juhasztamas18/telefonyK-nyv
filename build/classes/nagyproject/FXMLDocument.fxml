@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nagyproject.FXMLDocumentController">
+    <children>
+        <Label alignment="CENTER"  contentDisplay="CENTER" layoutX="201.0" layoutY="14.0" minHeight="16" minWidth="69" prefHeight="21.0" prefWidth="198.0" text="TELEFONKÖNYV" textAlignment="CENTER" />
+       <SplitPane dividerPositions="0.2842809364548495" layoutY="49.0" prefHeight="602.0" prefWidth="600.0">
+         <items>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                <children>
+                   <StackPane id="menu" fx:id="menu" layoutX="-24.0" layoutY="56.0" minWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                </children>
+             </AnchorPane>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                <children>
+                   <Pane id="exportPane" fx:id="exportPane" layoutX="102.0" layoutY="68.0" prefHeight="600.0" prefWidth="439.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                         <Button id="pdfButton" fx:id="pdfButton" layoutX="171.0" layoutY="285.0" mnemonicParsing="false" onAction="#pdfGeneration" prefHeight="33.0" prefWidth="88.0" text="PDF mentése" />
+                         <TextField id="pdfTextField" fx:id="pdfTextField" alignment="CENTER" layoutX="119.0" layoutY="236.0" prefHeight="33.0" prefWidth="198.0" promptText="Adja meg a pdf nevét" />
+                     </children>
+                  </Pane>
+                   <Pane id="errorPane" fx:id="errorPane" layoutX="57.0" layoutY="149.0" prefHeight="168.0" prefWidth="301.0" visible="false">
+                      <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5b5b7acc" height="168.0" stroke="BLACK" strokeType="INSIDE" width="301.0" />
+                         <Label id="infoMasssige" fx:id="infoMasssige" alignment="CENTER" layoutX="35.0" layoutY="24.0" prefHeight="68.0" prefWidth="232.0" text="Nincs érték vagy helytelen értéket adott meg." textAlignment="CENTER" wrapText="true" />
+                         <Button id="errorButton" fx:id="errorButton" contentDisplay="CENTER" layoutX="121.0" layoutY="99.0" mnemonicParsing="false" onAction="#errorMessinge" prefHeight="43.0" prefWidth="64.0" text="OK!" textAlignment="CENTER" />
+                      </children>
+                   </Pane>
+                   <Pane id="contactPane" fx:id="contactPane" prefHeight="600.0" prefWidth="439.0">
+                      <children>
+                         <TableView id="tablazat" fx:id="tablazat" editable="true" prefHeight="441.0" prefWidth="439.0">
+                            <placeholder>
+                                 <Label text="Nincs adat!" />
+                             </placeholder>
+                           <columns>
+                           </columns>
+                          <columns>
+                          </columns>
+                        </TableView>
+                        <TextField id="inputName" fx:id="inputName" layoutX="126.0" layoutY="457.0" promptText="Nagy Árpi" />
+                        <TextField id="inputEmail" fx:id="inputEmail" layoutX="126.0" layoutY="502.0" promptText="nagyarpi@gmail.com" />
+                        <TextField id="inputNumber" fx:id="inputNumber" layoutX="126.0" layoutY="548.0" promptText="+3620247955" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="60.0" layoutY="462.0" prefHeight="21.0" prefWidth="52.0" text="Név:" textAlignment="RIGHT" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="62.0" layoutY="507.0" prefHeight="21.0" prefWidth="52.0" text="Email:" textAlignment="RIGHT" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="60.0" layoutY="553.0" text="Telefon:" textAlignment="RIGHT" />
+                        <Button id="send" fx:id="send" layoutX="339.0" layoutY="533.0" mnemonicParsing="false" onAction="#addContact" text="Küldés" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+    </children>
+</AnchorPane>
